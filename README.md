@@ -11,11 +11,12 @@ product spec.
 | 1. Game engine (pure functions + unit tests) | ✅ done — `src/engine/`, 33 tests |
 | 2. Full UI in mock/demo mode | ✅ done — lobby, settings, board, preferences, end screen |
 | 3. `GameBackend` interface + `MockBackend` | ✅ done — `src/backend/` |
-| 4. `SupabaseBackend` + migration SQL + `SETUP.md` | ⬜ next session |
+| 4. `SupabaseBackend` + migration SQL + `SETUP.md` | ✅ done — see [`SETUP.md`](SETUP.md) (one-time dashboard step required) |
 
 With no `.env`, the app runs in **demo mode** (in-memory, hotseat — add local players in the
-lobby and switch seats from the banner). Adding `VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY`
-to `.env` will activate the Supabase backend once step 4 lands; no other code changes needed.
+lobby and switch seats from the banner). With `VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY`
+set in `.env`, the app uses the Supabase backend — real multiplayer across devices. The
+one-time database setup is in [`SETUP.md`](SETUP.md).
 
 ## Run it
 
